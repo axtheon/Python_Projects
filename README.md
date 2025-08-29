@@ -1,7 +1,7 @@
 # 🧪 Python Experiments
 
 Welcome to my collection of beginner Python projects!  
-These are **experiments** I’ve been working on while learning Python — either by following along with my course or by just stumbling around and trying to apply new methods into small projects.
+These are **Projects** I’ve been working on while learning Python — either by following along with my course or by just stumbling around and trying to apply new methods into small projects.
 
 I upload them here so I can track my progress and see how my coding skills improve over time. 🚀  
 
@@ -17,7 +17,7 @@ And many more SOON!
 ---
 
 ## ⚡ Note
-These are **not advanced projects**.  
+Some of these are **not advanced projects**.  
 They are my first steps in programming and help me practice:
 - Input handling  
 - Conditional statements  
