@@ -34,5 +34,3 @@ if __name__ == "__main__":
     minutes = int(input("Enter minutes (e.g., 30 for half past): ").strip())
 
     send_whatsapp_message(phone_number, message, hours, minutes)
-
-
