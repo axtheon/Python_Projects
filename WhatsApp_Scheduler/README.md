@@ -24,11 +24,11 @@ pip install pywhatkit
 🚀 How to Use
 
 Clone the repository:
-git clone https://github.com/axtheon/WhatsApp-scheduler.git
-cd WhatsApp-scheduler
+git clone https://github.com/axtheon/WhatsApp_scheduler.git
+cd WhatsApp_scheduler
 
 Run the script:
-python scheduler.py
+python main.py
 
 Enter the required details when prompted:
 
