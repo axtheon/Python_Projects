@@ -3,26 +3,22 @@
 # it will give you three chances and after that you won't be able to unlock.
 
 password = "Abdullah"
+attempts = 3
 
-a = input("Enter the password: ")
+while True:
+    a = input("Enter the password (or 0 to exit): ")
 
-if a == password:
-    print("Unlocked")
-    exit()
-else:
-    print("You have only 2 tries left!")
+    if a == "0":
+        print("Exiting program...")
+        break
 
-    a = input("Enter the password: ")
-
-if a == password:
-    print("Unlocked")
-    exit()
-else:
-    print("You have only 1 try left!")
-
-    a = input("Enter the password: ")
-
-if a == password:
-    print("Unlocked")
-else:
-    print("Your device is locked for 24 hours!")
+    if a == password:
+        print("Unlocked")
+        break
+    else:
+        attempts -= 1
+        if attempts > 0:
+            print(f"Wrong password! You have {attempts} {'try' if attempts == 1 else 'tries'} left.\n")
+        else:
+            print("Your device is locked for 24 hours!")
+            break
