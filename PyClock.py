@@ -5,7 +5,7 @@ It's most likely that Ctrl+c won't stop the code.
 So you have to stop it manually.
 It will work in CMD, Powershell or other terminals.
 """)
-# Main function for clock.
+# Function for clock.
 def clock():
     print("Press Ctrl + C to stop!\n")
     try:
@@ -16,9 +16,7 @@ def clock():
     except KeyboardInterrupt:
         print("\nReturning to Main Menu!\n")
 
-# Main function for stopwatch.
-import time
-
+# Function for stopwatch.
 def stopwatch():
     print("Stopwatch started, Press Ctrl + C to quit!\n")
     start = time.time()
@@ -34,7 +32,7 @@ def stopwatch():
         print("\nReturning to Main Menu!\n")
 
 
-# Main function for timer.
+# Function for timer.
 def timer():
     print("Press Ctrl + C to quit!\n")
     try:
