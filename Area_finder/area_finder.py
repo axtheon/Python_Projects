@@ -10,18 +10,27 @@ while True:
         elif choice == 1:
             base = float(input("Enter base of triangle: "))
             height = float(input("Enter height of triangle: "))
+            if base <= 0 or height <= 0:
+                print("Base and height must be positive numbers.\n")
+                continue
             area = 0.5 * base * height
             print("The area of the triangle is:", area, "\n")
 
         elif choice == 2:
             base = float(input("Enter base of parallelogram: "))
             height = float(input("Enter height of parallelogram: "))
+            if base <= 0 or height <= 0:
+                print("Base and height must be positive numbers.\n")
+                continue
             area = base * height
             print("The area of the parallelogram is:", area, "\n")
 
         elif choice == 3:
             d1 = float(input("Enter first diagonal of rhombus: "))
             d2 = float(input("Enter second diagonal of rhombus: "))
+            if d1 <= 0 or d2 <= 0:
+                print("Diagonals must be positive numbers.\n")
+                continue
             area = 0.5 * d1 * d2
             print("The area of the rhombus is:", area, "\n")
 
@@ -30,4 +39,3 @@ while True:
 
     except ValueError:
         print("Invalid input! Please enter a number (0, 1, 2, or 3).\n")
- 
