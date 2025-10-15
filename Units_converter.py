@@ -1,19 +1,19 @@
 # Function for taking inputs
 def get_input(prompt):
-    while True:  # keep looping until valid input
+    while True:
         try:
-            return float(input(prompt)) # The prompt will be given at the time of usage
+            return float(input(prompt))  # Ask user and convert to float
         except ValueError:
-            print("\nInvalid input! Please enter a number.\n")
+            print("\nInvalid input! Please enter a valid number.\n")
 
- # Banner
-print("="*25)
-print("   UNIT CONVERTER   ")
-print("="*25)
+# Banner
+print("=" * 40)
+print("           UNIT CONVERTER            ")
+print("=" * 40)
 
-# Functions for conversion
+# Conversion functions
 def km_to_miles():
-    km = get_input("Enter Kilometers: ") # Using the function for inputs and adding prompt
+    km = get_input("Enter Kilometers: ")
     print(f"{km} Kilometers = {km * 0.621371:.2f} Miles\n")
 
 def miles_to_km():
@@ -52,6 +52,22 @@ def cm_to_meters():
     cm = get_input("Enter Centimeters: ")
     print(f"{cm} Centimeters = {cm / 100:.2f} Meters\n")
 
+def inches_to_meters():
+    inches = get_input("Enter Inches: ")
+    print(f"{inches} Inches = {inches * 0.0254:.2f} Meters\n")
+
+def meters_to_inches():
+    meters = get_input("Enter Meters: ")
+    print(f"{meters} Meters = {meters / 0.0254:.2f} Inches\n")
+
+def inches_to_cm():
+    inches = get_input("Enter Inches: ")
+    print(f"{inches} Inches = {inches * 2.54:.2f} Centimeters\n")
+
+def cm_to_inches():
+    cm = get_input("Enter Centimeters: ")
+    print(f"{cm} Centimeters = {cm / 2.54:.2f} Inches\n")
+
 # Dictionary mapping
 conversions = {
     1: ("Kilometers to Miles", km_to_miles),
@@ -63,15 +79,20 @@ conversions = {
     7: ("Inches to Feet", inches_to_feet),
     8: ("Feet to Inches", feet_to_inches),
     9: ("Meters to Centimeters", meters_to_cm),
-    10: ("Centimeters to Meters", cm_to_meters)
+    10: ("Centimeters to Meters", cm_to_meters),
+    11: ("Inches to Meters", inches_to_meters),
+    12: ("Meters to Inches", meters_to_inches),
+    13: ("Inches to Centimeters", inches_to_cm),
+    14: ("Centimeters to Inches", cm_to_inches)
 }
 
-
+# Main loop
 while True:
-    print("\nChose an option:")
-    print("0 to exit")
-    for key, (name,_) in conversions.items(): # Prints the conversions dictionary ignoring the functions
-        print(f"{key}: {name}")
+    print("\nChoose a conversion option:")
+    print("0 - Exit\n")
+
+    for key, (name, _) in conversions.items():
+        print(f"{key}. {name}")
     print()
 
     try:
@@ -81,11 +102,13 @@ while True:
         continue
 
     if choice == 0:
-        print("\nThanks for Using this program!\n")
+        print("\nThanks for using this Unit Converter!\n")
         break
 
-    elif choice in conversions: # Checks if any key in the conversions matches the choice
-        conversions[choice][1]() # Calls the function
-
+    elif choice in conversions:
+        print("-" * 40)
+        conversions[choice][1]()  # Execute the function
+        print("-" * 40)
     else:
-        print("\nInvalid input! Please enter a number assigned to the choices.\n")
+        print("\nInvalid choice! Please select a valid option.\n")
+
