@@ -1,6 +1,4 @@
-# An unlocking dialog box in python in which if the password is same as the pre-written
-# password, it will print Unlocked 3 times and if it's not,
-# it will give you three chances and after that you won't be able to unlock.
+# A simple password checker program with limited attempts.
 
 password = "Abdullah"
 attempts = 3
